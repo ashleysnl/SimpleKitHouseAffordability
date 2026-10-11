@@ -128,13 +128,23 @@
       supportSecondaryLabel: "Browse more tools"
     };
   </script>
+
+  <!-- Shared V2 components, bundled locally by the portable site build. -->
+  <link rel="stylesheet" href="https://core.simplekit.app/v2/foundations.css">
+  <link rel="stylesheet" href="https://core.simplekit.app/v2/system.css">
+  <link rel="stylesheet" href="https://core.simplekit.app/v2/calculators.css">
+  <link rel="stylesheet" href="./v2-calculator.css">
+  <script defer src="https://core.simplekit.app/v2/shell.js"></script>
 </head>
-<body>
-  <a class="skip-link" href="#mainContent">Skip to content</a>
+<body class="sk-v2" data-v2-system="1" data-v2-calculator="house-affordability-calculator" data-v2-family="housing-debt">
+<a class="v2s-skip v2-button" href="#mainContent">Skip to content</a>
+<header class="v2s-header"><div class="v2s-wrap v2s-header-inner"><a class="v2s-brand" href="/" aria-label="SimpleKit home"><svg aria-hidden="true" focusable="false"><use href="https://core.simplekit.app/v2/icons/sprite.svg#calculator"></use></svg>SimpleKit</a><button type="button" class="v2s-menu" data-v2s-menu aria-controls="v2-house-affordability-calculator-nav" aria-expanded="false" hidden>Menu</button><nav class="v2s-nav" id="v2-house-affordability-calculator-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/tools/" aria-current="page">Tools</a><a href="/learn/">Learn</a><a href="/about/">About</a><a href="/support/">Support</a></nav></div></header>
+
+  
 
   <div class="page-shell affordability-shell">
-    <header class="hero hero-affordability" aria-labelledby="pageTitle">
-      <div data-simplekit-header></div>
+    <header class="hero hero-affordability v2c-hero" aria-labelledby="pageTitle">
+      
 
       <div class="hero-copy">
         <p class="eyebrow">Housing planning calculator</p>
@@ -171,8 +181,8 @@
       </aside>
     </header>
 
-    <main id="mainContent" class="page-flow">
-      <section class="panel intro-panel" aria-labelledby="introHeading">
+    <main id="mainContent" class="page-flow v2c-main" tabindex="-1">
+      <section class="panel intro-panel v2c-surface" aria-labelledby="introHeading">
         <div class="panel-header">
           <div>
             <p class="section-kicker">What this tool does</p>
@@ -204,7 +214,7 @@
         </div>
       </section>
 
-      <section id="calculatorSection" class="panel" aria-labelledby="calculatorHeading">
+      <section id="calculatorSection" class="panel v2c-surface" aria-labelledby="calculatorHeading">
         <div class="panel-header">
           <div>
             <p class="section-kicker">Calculator</p>
@@ -214,7 +224,7 @@
         </div>
 
         <div class="calculator-layout">
-          <form id="affordabilityForm" class="calculator-card no-print" novalidate>
+          <form id="affordabilityForm" class="calculator-card no-print v2c-card" novalidate>
             <div class="form-toolbar">
               <div>
                 <strong>Your scenario</strong>
@@ -255,7 +265,7 @@
 
             <div id="stepNav" class="step-nav" aria-label="Calculator steps"></div>
 
-            <section id="step1" class="input-card input-step is-active" aria-labelledby="step1Heading">
+            <section id="step1" class="input-card input-step is-active v2c-card" aria-labelledby="step1Heading">
               <div class="input-card-head">
                 <div>
                   <span class="step-kicker">Step 1</span>
@@ -283,7 +293,7 @@
               </div>
             </section>
 
-            <section id="step2" class="input-card input-step" aria-labelledby="step2Heading">
+            <section id="step2" class="input-card input-step v2c-card" aria-labelledby="step2Heading">
               <div class="input-card-head">
                 <div>
                   <span class="step-kicker">Step 2</span>
@@ -324,7 +334,7 @@
               </div>
             </section>
 
-            <section id="step3" class="input-card input-step" aria-labelledby="step3Heading">
+            <section id="step3" class="input-card input-step v2c-card" aria-labelledby="step3Heading">
               <div class="input-card-head">
                 <div>
                   <span class="step-kicker">Step 3</span>
@@ -380,7 +390,7 @@
           <div class="results-stack">
             <section id="resultsStatus" class="results-status" aria-live="polite"></section>
 
-            <section id="resultsSection" class="results-shell" aria-labelledby="resultsHeading">
+            <section id="resultsSection" class="results-shell v2c-card" aria-labelledby="resultsHeading">
               <div class="results-block-head">
                 <div>
                   <p class="section-kicker">Results</p>
@@ -396,7 +406,7 @@
               <div id="resultsNextStep" class="results-next-step"></div>
             </section>
 
-            <details class="results-shell results-details" open>
+            <details class="results-shell results-details v2c-card" open>
               <summary>
                 <span class="section-kicker">Decision guide</span>
                 <strong>How this compares with common norms</strong>
@@ -404,7 +414,7 @@
               <div id="decisionGuide" class="decision-guide"></div>
             </details>
 
-            <details class="results-shell results-details">
+            <details class="results-shell results-details v2c-card">
               <summary>
                 <span class="section-kicker">Calculation details</span>
                 <strong>What is driving the estimate</strong>
@@ -412,7 +422,7 @@
               <dl id="paymentBreakdown" class="breakdown-list"></dl>
             </details>
 
-            <details class="results-shell results-details no-print">
+            <details class="results-shell results-details no-print v2c-card">
               <summary>
                 <span class="section-kicker">Share</span>
                 <strong id="shareHeading">Save or share this scenario</strong>
@@ -427,7 +437,7 @@
         </div>
       </section>
 
-      <details id="methodologySection" class="panel panel-details">
+      <details id="methodologySection" class="panel panel-details v2c-surface">
         <summary>
           <span class="section-kicker">Methodology</span>
           <strong id="methodologyHeading">How the affordability estimate works</strong>
@@ -446,7 +456,7 @@
         </ul>
       </details>
 
-      <details class="panel panel-details">
+      <details class="panel panel-details v2c-surface">
         <summary>
           <span class="section-kicker">Rules of thumb</span>
           <strong id="normsHeading">Common affordability norms to keep in mind</strong>
@@ -486,7 +496,7 @@
         </div>
       </details>
 
-      <details class="panel panel-details">
+      <details class="panel panel-details v2c-surface">
         <summary>
           <span class="section-kicker">How to read the result</span>
           <strong id="interpretHeading">Affordability is about margin, not just approval</strong>
@@ -508,7 +518,7 @@
         </div>
       </details>
 
-      <details class="panel panel-details">
+      <details class="panel panel-details v2c-surface">
         <summary>
           <span class="section-kicker">FAQ</span>
           <strong id="faqHeading">Common questions about house affordability</strong>
@@ -550,7 +560,7 @@
         </div>
       </details>
 
-      <section class="panel" aria-labelledby="relatedToolsHeading">
+      <section class="panel v2c-surface" aria-labelledby="relatedToolsHeading">
         <div class="panel-header">
           <div>
             <p class="section-kicker">Related tools</p>
@@ -587,7 +597,7 @@
         </div>
       </section>
 
-      <section class="panel disclaimer-panel" aria-labelledby="disclaimerHeading">
+      <section class="panel disclaimer-panel v2c-surface" aria-labelledby="disclaimerHeading">
         <div class="panel-header">
           <div>
             <p class="section-kicker">Disclaimer</p>
@@ -597,7 +607,7 @@
         </div>
       </section>
 
-      <section class="panel" aria-labelledby="canadaContextHeading-house-affordability">
+      <section class="panel v2c-surface" aria-labelledby="canadaContextHeading-house-affordability">
         <div class="panel-header">
           <div>
             <p class="section-kicker">Canadian context</p>
@@ -626,11 +636,14 @@
 
 
       <div data-simplekit-support></div>
-      <div data-simplekit-footer></div>
+      
     </main>
   </div>
 
   <script type="module" src="https://core.simplekit.app/core.js"></script>
   <script src="./assets/js/app.js" defer></script>
+
+<footer class="v2s-footer"><div class="v2s-wrap v2s-footer-inner"><div class="v2s-stack"><strong>SimpleKit</strong><p class="v2s-help">Free planning tools with clearer next steps.</p></div><div class="v2s-stack"><nav aria-label="Footer navigation"><a href="/tools/">Tools</a><a href="/learn/">Learn</a><a href="/methodology/">Methodology &amp; sources</a><a href="/privacy/">Privacy</a><a href="/support/">Support</a></nav><p class="v2s-help">Estimates for planning, not financial advice. Financial inputs stay in your browser; existing site analytics are described in our privacy policy.</p></div></div></footer>
+<script defer src="https://core.simplekit.app/v2/calculators.js"></script>
 </body>
 </html>
